@@ -1,0 +1,102 @@
+{
+  "name": "Zalo Bulk Number Profile",
+  "brand": "AvatarLookup",
+  "repository": "avatarlookup/zalo-bulk-profile-api",
+  "description": "Upload numbers and download the Zalo profile data, avatar included.",
+  "official_site": "https://avatarlookup.com",
+  "landing_page": "https://avatarlookup.com/products/zalo_profile_batch",
+  "canonical_docs": "https://avatarlookup.com/api-docs",
+  "base_url": "https://avatarlookup.com",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "async-bulk",
+  "product": "zalo_profile_batch",
+  "identifier_kind": "phone",
+  "requires_country": true,
+  "endpoints": {
+    "submit": {
+      "method": "POST",
+      "path": "/api/v1/bulk-tasks"
+    },
+    "status": {
+      "method": "GET",
+      "path": "/api/v1/bulk-tasks/{id}"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/api/v1/balance"
+    }
+  },
+  "limits": {
+    "min_items": 1000,
+    "max_items": 100000,
+    "poll_interval_seconds": 30,
+    "file_formats": [
+      "txt",
+      "csv"
+    ]
+  },
+  "result_fields": [
+    {
+      "name": "number",
+      "example": "84912345678",
+      "description": ""
+    },
+    {
+      "name": "activated",
+      "example": "yes",
+      "description": ""
+    },
+    {
+      "name": "uid",
+      "example": "440975967",
+      "description": ""
+    },
+    {
+      "name": "nickname",
+      "example": "Minh Anh",
+      "description": ""
+    },
+    {
+      "name": "avatar",
+      "example": "https://s160-26-ava-talk.zadn.vn/example.jpg",
+      "description": ""
+    },
+    {
+      "name": "avatar_type",
+      "example": "Single Person",
+      "description": ""
+    },
+    {
+      "name": "person_count",
+      "example": "1",
+      "description": ""
+    },
+    {
+      "name": "gender",
+      "example": "female",
+      "description": ""
+    },
+    {
+      "name": "age",
+      "example": "28",
+      "description": ""
+    },
+    {
+      "name": "skin_color",
+      "example": "asian",
+      "description": ""
+    }
+  ],
+  "statuses": [
+    "processing",
+    "success",
+    "failed"
+  ],
+  "pricing_url": "https://avatarlookup.com/pricing",
+  "maintainer": "AvatarLookup",
+  "license": "MIT",
+  "last_reviewed": "2026-09-22"
+}
