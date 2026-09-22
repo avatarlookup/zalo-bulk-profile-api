@@ -20,16 +20,16 @@ This is the official AvatarLookup example repository for **one** bulk product, `
 
 | Column | Example | Meaning |
 |---|---|---|
-| `number` | `84912345678` |  |
-| `activated` | `yes` |  |
-| `uid` | `440975967` |  |
-| `nickname` | `Minh Anh` |  |
-| `avatar` | `https://s160-26-ava-talk.zadn.vn/example.jpg` |  |
-| `avatar_type` | `Single Person` |  |
-| `person_count` | `1` |  |
-| `gender` | `female` |  |
-| `age` | `28` |  |
-| `skin_color` | `asian` |  |
+| `number` | `84912345678` | The submitted number, exactly as it appeared in your file. |
+| `activated` | `yes` | Whether the number is registered on Zalo. |
+| `uid` | `440975967` | Telegram user id. |
+| `nickname` | `Minh Anh` | Public display name on the profile. |
+| `avatar` | `https://s160-26-ava-talk.zadn.vn/example.jpg` | Avatar URL. |
+| `avatar_type` | `Single Person` | What the avatar picture appears to contain, e.g. a single person. |
+| `person_count` | `1` | How many people were detected in the avatar. |
+| `gender` | `female` | Gender estimated from the avatar. |
+| `age` | `28` | Age band estimated from the avatar. |
+| `skin_color` | `asian` | Skin tone estimated from the avatar. |
 
 The result is a **point-in-time signal**, not a verdict, and not identity data. It describes what the provider reported at the moment the task ran.
 
